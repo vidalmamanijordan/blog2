@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        {{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> --}}
         <script src="https://cdn.tailwindcss.com"></script>
 
         <style>
@@ -22,6 +22,7 @@
 
     @php
         $color='red';
+        $alert='alert2';
     @endphp
 
     <body>
@@ -32,18 +33,21 @@
                 </x-slot>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sint tenetur rem deleniti dolorem reprehenderit quasi repellendus necessitatibus reiciendis, omnis illo eos perspiciatis dolorum, quisquam tempora id optio explicabo rerum?
             </x-alert>
-            <x-alert>
+            
+            <x-alert2 color="blue" class="mb-4">
                 <x-slot name="title">
-                    Titulo 02
+                    Título 02
                 </x-slot>
-                Hola Vidal
-            </x-alert>
-            <x-alert>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque laboriosam tempora illo exercitationem illum perferendis sint. Iste numquam quisquam eligendi sunt necessitatibus est quibusdam? Labore, harum! Atque, suscipit voluptatum.
+            </x-alert2>
+
+            <x-dynamic-component :component="$alert">
                 <x-slot name="title">
-                    Titulo 03
+                    Título 02
                 </x-slot>
-                Hola Ruben
-            </x-alert>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque laboriosam tempora illo exercitationem illum perferendis sint. Iste numquam quisquam eligendi sunt necessitatibus est quibusdam? Labore, harum! Atque, suscipit voluptatum.
+            </x-dynamic-component>
+
         </div>
     </body>
 </html>

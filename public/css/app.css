@@ -1317,6 +1317,14 @@ select {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
+.rounded-t {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.rounded-b {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
 .border {
   border-width: 1px;
 }
@@ -1334,6 +1342,9 @@ select {
 }
 .border-b {
   border-bottom-width: 1px;
+}
+.border-t-0 {
+  border-top-width: 0px;
 }
 .border-r {
   border-right-width: 1px;
